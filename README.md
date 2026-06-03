@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://avatars.githubusercontent.com/u/130314967?s=200&v=4" alt="xAI Logo" width="100" />
+  <img src="https://drive.google.com/file/d/1WBU79b60w5iuTnnCBZ9U4bTb52uagF9L/view?usp=drivesdk
   <h1>xAI Python SDK</h1>
   <p>The official Python SDK for xAI's APIs</p>
   <a href="https://pypi.org/project/xai-sdk">
