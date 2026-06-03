@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAIFANA الرقمية | التميز الرقمي بلا حدود</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+        body { font-family: 'Cairo', sans-serif; }
+        
+        .hero-bg { 
+            background: linear-gradient(135deg, #0a1428 0%, #1c2a4a 100%), url('https://picsum.photos/id/1015/2000/1300') center/cover no-repeat fixed;
+        }
+        
+        .gold-gradient { 
+            background: linear-gradient(90deg, #fcd34d, #eab308); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        /* تأثير النبض الفاخر للوجو SAIFANA */
+        .logo-saifana {
+            width: 85px;
+            height: 85px;
+            object-fit: contain;
+            transition: all 0.6s ease;
+            animation: pulse-glow 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.6));
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.6));
+            }
+            50% {
+                transform: scale(1.12);
+                filter: drop-shadow(0 0 35px rgba(245, 158, 11, 0.9));
+            }
+        }
+
+        .project-card { 
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); 
+        }
+        .project-card:hover { 
+            transform: scale(1.06) translateY(-10px); 
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+
+    <!-- Navbar فاخر -->
+    <nav class="fixed top-0 w-full bg-slate-900/95 backdrop-blur-3xl z-50 border-b border-amber-400/10">
+        <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+            <div class="flex items-center gap-5">
+                <!-- اللوجو الذهبي النابض -->
+                <img src="https://grok.x.ai/generated-image/ftgg3" 
+                     alt="SAIFANA Logo" 
+                     class="logo-saifana">
+                <div>
+                    <h1 class="text-4xl font-black tracking-[-2px]">SAIFANA</h1>
+                    <p class="text-amber-400 text-xs tracking-[4px] -mt-1">الرقمية</p>
+                </div>
+            </div>
+            <div class="hidden lg:flex gap-10 text-lg font-medium">
+                <a href="#home" class="hover:text-amber-400 transition">الرئيسية</a>
+                <a href="#vision" class="hover:text-amber-400 transition">رؤيتنا</a>
+                <a href="#services" class="hover:text-amber-400 transition">خدماتنا</a>
+                <a href="#projects" class="hover:text-amber-400 transition">مشاريعنا</a>
+                <a href="#contact" class="hover:text-amber-400 transition">اتصل بنا</a>
+            </div>
+            <a href="tel:+963995155627" 
+               class="flex items-center gap-3 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-yellow-300 hover:to-amber-400 text-slate-950 px-8 py-4 rounded-3xl font-bold transition shadow-lg">
+                <i class="fa-solid fa-phone text-2xl"></i> 
+                اتصل بنا الآن
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-24">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-7 py-3 rounded-3xl text-sm mb-8">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                    شريك التحول الرقمي في المنطقة
+                </div>
+                <h1 class="text-7xl lg:text-8xl font-black leading-none tracking-tighter">
+                    SAIFANA<br><span class="gold-gradient">نصنع التميز الرقمي</span>
+                </h1>
+                <p class="mt-8 text-2xl text-slate-300">حلول تقنية متكاملة تجمع بين الابتكار والاحترافية لتأخذ عملك إلى آفاق جديدة في عصر الرقمنة.</p>
+                <div class="mt-12 flex flex-wrap gap-6">
+                    <a href="tel:+963995155627" 
+                       class="bg-amber-400 hover:bg-yellow-300 text-slate-950 px-14 py-6 rounded-3xl text-xl font-bold transition flex items-center gap-4 shadow-xl">
+                        ابدأ مشروعك الآن
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a href="#projects" class="border border-white/60 hover:border-amber-400 px-10 py-6 rounded-3xl text-xl font-medium transition">استكشف أعمالنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section id="vision" class="py-28 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5">
+                    <h2 class="text-6xl font-black mb-6">رؤيتنا</h2>
+                    <p class="text-2xl text-slate-300 leading-relaxed">
+                        أن نصبح المرجع الأول في تقديم الحلول الرقمية المتكاملة التي تدفع الشركات والمؤسسات نحو الريادة والاستدامة في العصر الرقمي.
+                    </p>
+                    <div class="mt-10 text-amber-400 text-lg font-medium">مهمتنا: تحويل الأفكار إلى واقع رقمي ناجح</div>
+                </div>
+                <div class="lg:col-span-7 bg-slate-800/70 backdrop-blur p-10 rounded-3xl border border-amber-400/20">
+                    <div class="grid grid-cols-2 gap-10">
+                        <div class="space-y-8">
+                            <div class="flex gap-6">
+                                <i class="fa-solid fa-lightbulb text-5xl text-amber-400"></i>
+                                <div>
+                                    <h4 class="font-bold text-xl">الابتكار</h4>
+                                    <p class="text-slate-400">نستخدم أحدث التقنيات لخلق حلول فريدة.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <i class="fa-solid fa-handshake text-5xl text-amber-400"></i>
+                                <div>
+                                    <h4 class="font-bold text-xl">الثقة</h4>
+                                    <p class="text-slate-400">علاقات طويلة الأمد مبنية على الاحترافية.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-8">
+                            <div class="flex gap-6">
+                                <i class="fa-solid fa-chart-line text-5xl text-amber-400"></i>
+                                <div>
+                                    <h4 class="font-bold text-xl">النمو</h4>
+                                    <p class="text-slate-400">نساعد عملاءنا على تحقيق نتائج ملموسة.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <i class="fa-solid fa-globe text-5xl text-amber-400"></i>
+                                <div>
+                                    <h4 class="font-bold text-xl">الشمولية</h4>
+                                    <p class="text-slate-400">حلول مخصصة تناسب كل حجم عمل.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-28 bg-black">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-5xl font-bold text-center mb-4">خدماتنا الرقمية</h2>
+            <p class="text-center text-slate-400 text-xl mb-16">نغطي كل ما تحتاجه للنجاح الرقمي</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-slate-900 p-10 rounded-3xl project-card border border-slate-700 hover:border-amber-400">
+                    <i class="fa-solid fa-code text-6xl text-amber-400 mb-8"></i>
+                    <h3 class="text-2xl font-bold mb-3">تطوير المواقع والتطبيقات</h3>
+                    <p class="text-slate-400">مواقع وتطبيقات احترافية بأداء عالي وتصميم متجاوب.</p>
+                </div>
+                <div class="bg-slate-900 p-10 rounded-3xl project-card border border-slate-700 hover:border-amber-400">
+                    <i class="fa-solid fa-bullhorn text-6xl text-amber-400 mb-8"></i>
+                    <h3 class="text-2xl font-bold mb-3">التسويق الرقمي</h3>
+                    <p class="text-slate-400">حملات مدفوعة، SEO، وسوشيال ميديا بنتائج مضمونة.</p>
+                </div>
+                <div class="bg-slate-900 p-10 rounded-3xl project-card border border-slate-700 hover:border-amber-400">
+                    <i class="fa-solid fa-brain text-6xl text-amber-400 mb-8"></i>
+                    <h3 class="text-2xl font-bold mb-3">الذكاء الاصطناعي</h3>
+                    <p class="text-slate-400">حلول AI مخصصة وأتمتة ذكية لعملياتك.</p>
+                </div>
+                <div class="bg-slate-900 p-10 rounded-3xl project-card border border-slate-700 hover:border-amber-400">
+                    <i class="fa-solid fa-shield-halved text-6xl text-amber-400 mb-8"></i>
+                    <h3 class="text-2xl font-bold mb-3">الأمن السيبراني</h3>
+                    <p class="text-slate-400">حماية شاملة لبياناتك وأنظمتك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-28 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-5xl font-bold text-center mb-16">مشاريعنا المميزة</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="project-card group relative overflow-hidden rounded-3xl bg-slate-800">
+                    <img src="https://picsum.photos/id/237/600/400" class="w-full h-64 object-cover transition-all group-hover:scale-110 duration-700">
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 p-8">
+                        <h4 class="font-bold text-2xl">متجر إلكتروني فاخر</h4>
+                        <p class="text-amber-400 text-sm">زيادة مبيعات +340%</p>
+                    </div>
+                </div>
+                <div class="project-card group relative overflow-hidden rounded-3xl bg-slate-800">
+                    <img src="https://picsum.photos/id/180/600/400" class="w-full h-64 object-cover transition-all group-hover:scale-110 duration-700">
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 p-8">
+                        <h4 class="font-bold text-2xl">تطبيق توصيل ذكي</h4>
+                        <p class="text-amber-400 text-sm">أكثر من 50 ألف مستخدم</p>
+                    </div>
+                </div>
+                <div class="project-card group relative overflow-hidden rounded-3xl bg-slate-800">
+                    <img src="https://picsum.photos/id/201/600/400" class="w-full h-64 object-cover transition-all group-hover:scale-110 duration-700">
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 p-8">
+                        <h4 class="font-bold text-2xl">منصة تعليمية رقمية</h4>
+                        <p class="text-amber-400 text-sm">دعم التحول التعليمي</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-28 bg-gradient-to-br from-slate-900 to-black">
+        <div class="max-w-2xl mx-auto px-8 text-center">
+            <h2 class="text-5xl font-bold mb-6">ابدأ رحلتك معنا</h2>
+            <p class="text-slate-400 text-xl mb-12">أرسل تفاصيل مشروعك أو اتصل مباشرة على الرقم أدناه</p>
+            <div class="mb-12">
+                <a href="tel:+963995155627" 
+                   class="inline-flex items-center gap-4 bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 px-12 py-6 rounded-3xl text-2xl font-bold hover:brightness-110 transition shadow-2xl">
+                    <i class="fa-solid fa-phone text-3xl"></i>
+                    +963 995 155 627
+                </a>
+            </div>
+            <form id="contactForm" class="space-y-8">
+                <input type="text" placeholder="الاسم الكامل" class="w-full bg-slate-800 border border-slate-700 rounded-3xl px-8 py-6 focus:border-amber-400 outline-none text-lg">
+                <input type="email" placeholder="البريد الإلكتروني" class="w-full bg-slate-800 border border-slate-700 rounded-3xl px-8 py-6 focus:border-amber-400 outline-none text-lg">
+                <textarea placeholder="وصف المشروع أو الاستفسار" rows="6" class="w-full bg-slate-800 border border-slate-700 rounded-3xl px-8 py-6 focus:border-amber-400 outline-none text-lg"></textarea>
+                <button type="button" onclick="submitForm()" 
+                        class="w-full bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 py-7 rounded-3xl text-2xl font-bold hover:brightness-110 transition">إرسال الطلب الآن</button>
+            </form>
+            <p id="successMsg" class="hidden mt-10 text-emerald-400 text-xl font-medium">تم استلام طلبك بنجاح! سنتواصل معك قريباً جداً.</p>
+        </div>
+    </section>
+
+    <footer class="bg-black py-14 text-center text-slate-500">
+        <div class="max-w-7xl mx-auto px-8">
+            © 2026 SAIFANA الرقمية — جميع الحقوق محفوظة<br>
+            <span class="text-xs">شريكك الاستراتيجي في التحول الرقمي</span>
+        </div>
+    </footer>
+
+    <script>
+        function submitForm() {
+            const msg = document.getElementById('successMsg');
+            msg.classList.remove('hidden');
+            setTimeout(() => msg.classList.add('hidden'), 7000);
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>

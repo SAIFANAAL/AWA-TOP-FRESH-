@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAIF GROK - طرق الدفع</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e2937);
+            color: #e2e8f0;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 480px;
+            margin: 40px auto;
+            background: #1e2937;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .header {
+            background: linear-gradient(90deg, #10b981, #34d399);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+        .amount {
+            background: #0f172a;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: #34d399;
+        }
+        .section {
+            padding: 25px;
+        }
+        .method {
+            background: #334155;
+            margin-bottom: 15px;
+            border-radius: 16px;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .method:hover {
+            transform: translateY(-4px);
+            background: #475569;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+        }
+        .method-icon {
+            width: 60px;
+            height: 60px;
+            background: #10b981;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-left: 15px;
+        }
+        .method-info h3 {
+            margin: 0 0 5px 0;
+            font-size: 20px;
+        }
+        .method-info p {
+            margin: 0;
+            color: #94a3b8;
+            font-size: 15px;
+        }
+        .btn {
+            width: 100%;
+            padding: 18px;
+            font-size: 20px;
+            font-weight: 700;
+            border: none;
+            border-radius: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-sham {
+            background: #10b981;
+            color: white;
+        }
+        .btn-bank {
+            background: #3b82f6;
+            color: white;
+        }
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        .btn:hover {
+            transform: scale(1.03);
+        }
+        .success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            background: #052e16;
+        }
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 16px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- الرأس -->
+        <div class="header">
+            <h1>SAIF GROK</h1>
+            <p>إكمال الدفع بأمان وسهولة</p>
+        </div>
+
+        <!-- المبلغ -->
+        <div class="amount">
+            المبلغ المستحق: <span id="total-amount">125,000</span> ل.س
+        </div>
+
+        <div class="section" id="payment-screen">
+            <h2 style="text-align:center; margin-bottom:25px;">اختر طريقة الدفع</h2>
+
+            <!-- شام كاش -->
+            <div class="method" onclick="selectMethod('sham')">
+                <div class="method-icon">💰</div>
+                <div class="method-info">
+                    <h3>شام كاش</h3>
+                    <p>دفع فوري عبر التطبيق الرسمي</p>
+                </div>
+            </div>
+
+            <!-- حوالة بنكية -->
+            <div class="method" onclick="selectMethod('bank')">
+                <div class="method-icon">🏦</div>
+                <div class="method-info">
+                    <h3>حوالة بنكية</h3>
+                    <p>تحويل من أي بنك + رفع الإيصال</p>
+                </div>
+            </div>
+
+            <!-- واتساب -->
+            <div class="method" onclick="openWhatsApp()">
+                <div class="method-icon" style="background:#25D366;">📱</div>
+                <div class="method-info">
+                    <h3>تواصل عبر واتساب</h3>
+                    <p>الرقم: 00963995155627</p>
+                </div>
+            </div>
+
+            <button class="btn btn-sham" onclick="initiateShamCash()">ادفع الآن عبر شام كاش</button>
+            <button class="btn btn-bank" onclick="showBankInfo()">دفع بحوالة بنكية</button>
+            <button class="btn btn-whatsapp" onclick="openWhatsApp()">تحدث معنا على واتساب الآن</button>
+        </div>
+
+        <!-- شاشة الحوالة البنكية -->
+        <div class="section" id="bank-screen" style="display:none;">
+            <h2>تفاصيل الحوالة البنكية</h2>
+            <p><strong>اسم صاحب الحساب:</strong> SAIF GROK</p>
+            <p><strong>رقم الحساب:</strong> 123456789012 (بنك بيمو - فرع دمشق)</p>
+            <p><strong>IBAN:</strong> SY123456789012345678901234</p>
+            <p style="color:#f59e0b; margin:20px 0;">بعد إجراء التحويل، ارفع صورة الإيصال أو أرسل رقم المعاملة عبر الواتساب.</p>
+            <button class="btn btn-whatsapp" onclick="openWhatsAppWithReceipt()">أرسل الإيصال عبر واتساب</button
