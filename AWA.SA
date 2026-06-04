@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP FRESH | بطاطا طبيعية مالحة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Cairo', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1598679253544-2c9798f6f6e0?w=1920') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .logo {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+            margin-bottom: 20px;
+        }
+        .tagline {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+        }
+        .section {
+            padding: 100px 0;
+        }
+        .about {
+            background: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1a3c34;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-15px);
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 25px;
+        }
+        .product-info h3 {
+            color: #1a3c34;
+            margin-bottom: 15px;
+        }
+        .contact {
+            background: #1a3c34;
+            color: white;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 2.5rem;
+            transition: all 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ffd700;
+            transform: scale(1.2);
+        }
+        footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 40px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a3c34;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #ffed8a;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo" style="font-size: 2rem; margin: 0;">TOP FRESH</div>
+            <div class="nav-links">
+                <a href="#about">نبذة عنا</a>
+                <a href="#products">منتجاتنا</a>
+                <a href="#distribution">التوزيع</a>
+                <a href="#contact">تواصل معنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="header">
+        <div>
+            <div class="logo">TOP FRESH</div>
+            <p class="tagline">بطاطا طبيعية • طازجة • مالحة</p>
+            <p style="font-size: 1.4rem; max-width: 700px; margin: 0 auto 30px;">
+                إنتاج وتوزيع البطاطا الطبيعية عالية الجودة
+            </p>
+            <a href="#contact" class="btn">اطلب الآن</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>نبذة عن الشركة</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                <div>
+                    <p style="font-size: 1.3rem; line-height: 2;">
+                        <strong>TOP FRESH</strong> هي شركة رائدة في مجال إنتاج وتوزيع البطاطا الطبيعية عالية الجودة. 
+                        نحن ملتزمون بتوفير أفضل أنواع البطاطا الطازجة للأسواق والمصانع والمطاعم.
+                    </p>
+                    <br>
+                    <p style="font-size: 1.2rem;">
+                        تأسست الشركة بهدف تقديم منتجات طبيعية 100% بدون مواد حافظة، مع التركيز على الجودة والطزاجة والمذاق المميز.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1607305388864-4f4e0c9c4a3e?w=800" 
+                         alt="مزرعة بطاطا" style="width: 100%; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <div class="container">
+            <h2>منتجاتنا الرئيسية</h2>
+            <div class="products-grid">
+
+                <!-- بطاطا مالحة -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1619741319794-4c3c2c2e2c2c?w=600" alt="بطاطا مالحة">
+                    <div class="product-info">
+                        <h3>البطاطا الطبيعية المالحة</h3>
+                        <p>رقائق بطاطا طبيعية مقرمشة، مالحة بطعم أصيل، مصنوعة من أجود أنواع البطاطا الطازجة.</p>
+                    </div>
+                </div>
+
+                <!-- بطاطا خام -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1598679253544-2c9798f6f6e0?w=600" alt="بطاطا خام">
+                    <div class="product-info">
+                        <h3>البطاطا الخام</h3>
+                        <p>توريد البطاطا الخام عالية الجودة لمصانع الشيبس والمعامل الغذائية.</p>
+                    </div>
+                </div>
+
+                <!-- بطاطا مقطعة -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a9c?w=600" alt="بطاطا مقطعة">
+                    <div class="product-info">
+                        <h3>البطاطا المقطعة</h3>
+                        <p>بطاطا مقطعة جاهزة للقلي، مثالية للمطاعم والفنادق والوجبات السريعة.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Distribution Section -->
+    <section id="distribution" class="section about">
+        <div class="container">
+            <h2>خدمات التوزيع</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 50px;">
+                
+                <div>
+                    <h3 style="color: #1a3c34; margin-bottom: 20px; font-size: 1.8rem;">
+                        <i class="fas fa-industry"></i> توزيع البطاطا الخام
+                    </h3>
+                    <p>نقوم بتوريد أفضل أنواع البطاطا الخام لمصانع إنتاج الشيبس والرقائق بمواصفات عالية الجودة وثبات في الحجم والجودة.</p>
+                </div>
+
+                <div>
+                    <h3 style="color: #1a3c34; margin-bottom: 20px; font-size: 1.8rem;">
+                        <i class="fas fa-cut"></i> توزيع البطاطا المقطعة
+                    </h3>
+                    <p>بطاطا مقطعة طازجة وجاهزة للاستخدام مباشرة في مطابخ المطاعم، الفنادق والكافيهات.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 style="color: white;">تواصل معنا</h2>
+            
+            <div style="text-align: center; margin: 50px 0;">
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div style="max-width: 700px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 50px; border-radius: 20px;">
+                <form>
+                    <input type="text" placeholder="الاسم" style="width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px;">
+                    <input type="email" placeholder="البريد الإلكتروني" style="width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px;">
+                    <input type="tel" placeholder="رقم الجوال" style="width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px;">
+                    <textarea placeholder="رسالتك" rows="6" style="width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px;"></textarea>
+                    <button type="submit" class="btn" style="background: #ffd700; width: 100%; margin-top: 20px;">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TOP FRESH - جميع الحقوق محفوظة</p>
+            <p style="margin-top: 10px;">إنتاج وتوزيع البطاطا الطبيعية المالحة</p>
+        </div>
+    </footer>
+
+</body>
+</html>
